@@ -13,8 +13,15 @@
 <body>
 
 	<h1>Jekyll Site</h1>
-
+	<header>
+		{% include nav.html %}
+	</header>
+	
 	{{ content }}
+
+	<footer>
+		{% include nav.html %}
+	</footer>
   
 </body>
 </html>
