@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ site.name }}</title>
+
+ <link rel="icon" href="favicon.ico">	
+ 
+  <link rel="stylesheet" href="css/normalize.css">				
+  <link rel="stylesheet" href="css/styles.css">	
+
+</head>
+<body>
+
+	<h1>Jekyll Site</h1>
+	<header>
+		{% include nav.html %}
+	</header>
+	
+	<aside>
+		<h3>My post</h3>
+		<ul>
+			{% for post in site.post %}
+
+			<li>
+				<a href="{{site.baseurl}} {{ post.url }}">{{ post.title }}</a>
+
+			</li>
+			{% endfor %}
+		</ul>
+
+	</aside>
+
+	<footer>
+		{% include nav.html %}
+	</footer>
+  
+</body>
+</html>
