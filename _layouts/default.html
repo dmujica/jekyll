@@ -17,13 +17,17 @@
 		{% include nav.html %}
 	</header>
 	
+	<article>
+		{{content}}
+	</article>
+
 	<aside>
 		<h3>My post</h3>
 		<ul>
 			{% for post in site.post %}
 
 			<li>
-				<a href="{{site.baseurl}} {{ post.url }}">{{ post.title }}</a>
+				<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 
 			</li>
 			{% endfor %}
